@@ -120,7 +120,8 @@ c = alt.Chart(site_df).mark_circle(size=60, color="#668dd1").encode(
     y='performance',
     color='system_name',
     tooltip=['system_name', 'date_stamp', 'performance', 'energy_prod(KWh)', 'C02 (Kg)']
-).interactive()
+).configure_legend(orient='bottom').interactive()
+
 st.altair_chart(c, use_container_width=True)
 
 """
@@ -131,7 +132,7 @@ c = alt.Chart(site_df).mark_circle(size=60, color="#66d196").encode(
     y='energy_prod(KWh)',
     color='system_name',
     tooltip=['system_name', 'date_stamp', 'energy_prod(KWh)']
-).interactive()
+).configure_legend(orient='bottom').interactive()
 st.altair_chart(c, use_container_width=True)
 
 """
@@ -142,7 +143,7 @@ c = alt.Chart(site_df).mark_circle(size=60, color="#666b73").encode(
     y='C02 (Kg)',
     color='system_name',
     tooltip=['system_name', 'date_stamp', 'C02 (Kg)']
-).interactive()
+).configure_legend(orient='bottom').interactive()
 st.altair_chart(c, use_container_width=True)
 
 
