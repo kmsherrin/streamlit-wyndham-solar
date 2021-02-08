@@ -6,6 +6,8 @@ import pydeck as pdk
 import altair as alt
 import streamlit.components.v1 as components
 
+st.set_page_config(page_title='Wyndham Solar Overview Viz')
+
 def add_more_data(main_curr_option: str, sites_to_add: list):
     # Get clean version of inital data
     # Format the site name so that it can be used to grab the data from the Github URL
